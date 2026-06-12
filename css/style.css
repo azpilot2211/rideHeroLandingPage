@@ -265,7 +265,7 @@ section { position: relative; padding: clamp(6rem, 12vh, 10rem) clamp(1.2rem, 6v
 /* ---- Features ---- */
 .features__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.6rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -473,6 +473,7 @@ section { position: relative; padding: clamp(6rem, 12vh, 10rem) clamp(1.2rem, 6v
 /* ---- Responsive ---- */
 @media (max-width: 900px) {
   .nav__links { display: none; }
+  .features__grid { grid-template-columns: 1fr; }
   .safety__inner { grid-template-columns: 1fr; }
   .safety__shield { order: -1; }
   .footer__grid { grid-template-columns: repeat(2, 1fr); }
