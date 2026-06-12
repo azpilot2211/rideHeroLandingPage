@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ride Hero — Southern Utah's ride-hailing app</title>
+  <meta name="description" content="Ride Hero is Southern Utah's ride-hailing app, built on trust. Upfront pricing, fast pickups, background-checked local drivers — serving St. George, Ivins, Hurricane, Toquerville, Leeds, and La Verkin." />
+  <meta property="og:title" content="Ride Hero — Southern Utah's ride-hailing app" />
+  <meta property="og:description" content="Upfront pricing. Fast pickups. Background-checked local drivers. Download Ride Hero and get there reliably, from St. George to La Verkin." />
+  <meta property="og:url" content="https://rideheroapp.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="assets/images/logo.png" />
+  <meta property="og:image" content="https://rideheroapp.com/assets/images/logo.png" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Fixed WebGL canvas -->
+  <canvas id="gl"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- Loader -->
+  <div class="loader" id="loader">
+    <div class="loader__mark">RIDE<span>HERO</span></div>
+    <div class="loader__bar"><div class="loader__fill" id="loaderFill"></div></div>
+  </div>
+
+  <!-- Nav -->
+  <header class="nav" id="nav">
+    <a class="nav__logo" href="#top"><img src="assets/images/logo.png" alt="" class="nav__logo-img" />RIDE<span>HERO</span></a>
+    <nav class="nav__links">
+      <a href="#how">How it works</a>
+      <a href="#safety">Safety</a>
+      <a href="#stories">Stories</a>
+      <a href="#cities">Cities</a>
+    </nav>
+    <a class="btn btn--small" href="https://ridr-hero.vercel.app/" target="_blank" rel="noopener">Open Web App</a>
+  </header>
+
+  <main id="top">
+
+    <!-- ===== 1 · HERO / VALUE PROP ===== -->
+    <section class="hero" id="hero">
+      <div class="hero__inner">
+        <p class="hero__eyebrow reveal">Southern Utah's ride-hailing app</p>
+        <h1 class="hero__title">
+          <span class="line"><span>Get there</span></span>
+          <span class="line"><span class="accent">reliably.</span></span>
+        </h1>
+        <p class="hero__sub reveal">From St. George to La Verkin — tap once, see your exact price, and a background-checked local driver is on the way, usually in under four minutes.</p>
+        <div class="hero__cta reveal">
+          <a class="btn" href="https://ridr-hero.vercel.app/" target="_blank" rel="noopener">Ride now — open the web app</a>
+          <span class="store-badge store-badge--soon" aria-label="App Store — coming soon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            <span><small>Coming soon to the</small>App Store</span>
+          </span>
+          <span class="store-badge store-badge--soon" aria-label="Google Play — coming soon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 20.5v-17c0-.59.34-1.11.84-1.35L13.69 12l-9.85 9.85c-.5-.25-.84-.76-.84-1.35m13.81-5.38L6.05 21.34l8.49-8.49 2.27 2.27m3.35-4.31c.34.27.59.69.59 1.19s-.22.9-.57 1.18l-2.29 1.32-2.5-2.5 2.5-2.5 2.27 1.31M6.05 2.66l10.76 6.22-2.27 2.27-8.49-8.49z"/></svg>
+            <span><small>Coming soon to</small>Google Play</span>
+          </span>
+        </div>
+        <div class="hero__stats reveal">
+          <div><strong data-count="3.8">0</strong><em>min avg pickup</em></div>
+          <div><strong data-count="6">0</strong><em>cities &amp; counting</em></div>
+          <div><strong data-count="4.9">0</strong><em>★ rider rating</em></div>
+        </div>
+      </div>
+      <div class="hero__scrollhint" aria-hidden="true"><span></span>Scroll</div>
+    </section>
+
+    <!-- ===== 2 · RELATABLE VISUALS ===== -->
+    <section class="visual" id="visual">
+      <div class="visual__sticky">
+        <h2 class="visual__words" aria-label="Every ride ends with you, exactly where you meant to be.">
+          <span class="vw">Every ride</span>
+          <span class="vw">ends with you,</span>
+          <span class="vw accent">exactly where</span>
+          <span class="vw accent">you meant to be.</span>
+        </h2>
+      </div>
+      <div class="visual__cards">
+        <figure class="vcard" data-speed="0.9">
+          <div class="vcard__img vcard__img--1" role="img" aria-label="Rider arriving at her destination at night, smiling at her driver"></div>
+          <figcaption>Maya, home by 11:04 — exactly when the app said.</figcaption>
+        </figure>
+        <figure class="vcard" data-speed="1.15">
+          <div class="vcard__img vcard__img--2" role="img" aria-label="Driver greeting a passenger with a fist bump through the window"></div>
+          <figcaption>Darnell &amp; his 5-star streak, 212 rides strong.</figcaption>
+        </figure>
+        <figure class="vcard" data-speed="0.8">
+          <div class="vcard__img vcard__img--3" role="img" aria-label="Friends getting out of a car downtown under city lights"></div>
+          <figcaption>Friday night, downtown, zero parking stress.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== 3 · CONVENIENCE & PREDICTABILITY ===== -->
+    <section class="features" id="features">
+      <div class="section-head">
+        <p class="eyebrow reveal">No surprises. Ever.</p>
+        <h2 class="reveal">Predictable from tap<br />to drop-off.</h2>
+      </div>
+      <div class="features__grid">
+        <article class="fcard">
+          <div class="fcard__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          </div>
+          <h3>Upfront pricing</h3>
+          <p>The price you see before you book is the price you pay. Locked in. No surge ambushes, no hidden fees, no fine print.</p>
+          <span class="fcard__tag">$12.40 means $12.40</span>
+        </article>
+        <article class="fcard">
+          <div class="fcard__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4.5 13.5H11L9.5 22 18 10.5h-6.5L13 2z"/></svg>
+          </div>
+          <h3>Fast pickups, smart routes</h3>
+          <p>Live traffic-aware routing matches you with the nearest driver and finds the quickest way through your city — average pickup under 4 minutes.</p>
+          <span class="fcard__tag">3.8 min avg pickup</span>
+        </article>
+        <article class="fcard">
+          <div class="fcard__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M2 10h20"/></svg>
+          </div>
+          <h3>Cashless &amp; effortless</h3>
+          <p>Card, Apple Pay, Google Pay — saved once, charged automatically. Step out of the car and you're done. Receipts land in your inbox.</p>
+          <span class="fcard__tag">Tap. Ride. Walk away.</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== 4 · HOW IT WORKS ===== -->
+    <section class="how" id="how">
+      <div class="section-head">
+        <p class="eyebrow reveal">How it works</p>
+        <h2 class="reveal">Three taps between<br />you and anywhere.</h2>
+      </div>
+      <ol class="how__steps">
+        <li class="step">
+          <span class="step__num">01</span>
+          <div class="step__line" aria-hidden="true"></div>
+          <h3>Tap to request</h3>
+          <p>Drop your pin, see your fixed price and pickup time instantly, and confirm with one tap.</p>
+        </li>
+        <li class="step">
+          <span class="step__num">02</span>
+          <div class="step__line" aria-hidden="true"></div>
+          <h3>Meet your driver</h3>
+          <p>Track them live on the map. Match the plate, the photo, and your PIN — then hop in.</p>
+        </li>
+        <li class="step">
+          <span class="step__num">03</span>
+          <div class="step__line" aria-hidden="true"></div>
+          <h3>Arrive &amp; rate</h3>
+          <p>Payment happens automatically. Rate your driver, they rate you, and the community stays great.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ===== 5 · SAFETY ===== -->
+    <section class="safety" id="safety">
+      <div class="safety__inner">
+        <div class="safety__copy">
+          <p class="eyebrow reveal">Safety first. Always.</p>
+          <h2 class="reveal">Built so a stranger's car<br />never feels like one.</h2>
+          <p class="reveal safety__lede">Getting in a car with someone you've never met — or letting them into yours — should never be a leap of faith. We engineered the trust in.</p>
+          <ul class="safety__list">
+            <li class="reveal">
+              <h3>Background-checked drivers</h3>
+              <p>Every driver passes a criminal background check, driving-record review, and vehicle inspection before their first ride — re-screened annually.</p>
+            </li>
+            <li class="reveal">
+              <h3>Mutual ratings, real accountability</h3>
+              <p>Riders rate drivers and drivers rate riders after every trip. Consistently low ratings mean you're off the platform — in either seat.</p>
+            </li>
+            <li class="reveal">
+              <h3>Live trip tools</h3>
+              <p>Share your route with loved ones in real time, verify your driver with a PIN, and reach 24/7 in-app emergency support with one swipe.</p>
+            </li>
+          </ul>
+        </div>
+        <div class="safety__shield reveal" aria-hidden="true">
+          <svg viewBox="0 0 200 220" fill="none">
+            <path class="shield-path" d="M100 10 L180 40 V110 C180 160 145 195 100 210 C55 195 20 160 20 110 V40 Z" stroke="url(#sg)" stroke-width="2"/>
+            <path class="shield-check" d="M65 110 L90 135 L140 80" stroke="url(#sg)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+            <defs>
+              <linearGradient id="sg" x1="0" y1="0" x2="200" y2="220">
+                <stop offset="0" stop-color="#67e8f9"/><stop offset="1" stop-color="#a78bfa"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 6 · SOCIAL PROOF ===== -->
+    <section class="stories" id="stories">
+      <div class="section-head">
+        <p class="eyebrow reveal">Word on the street</p>
+        <h2 class="reveal">Don't take our word for it.</h2>
+      </div>
+      <div class="stories__grid">
+        <blockquote class="quote">
+          <p>"I commute with Ride Hero five days a week. The price never changes mid-ride and my driver is always there before my coffee's done. It's the only app where 'arriving in 3 minutes' actually means 3 minutes."</p>
+          <footer><strong>Priya S.</strong><span>Rider · 480+ trips · St. George</span></footer>
+        </blockquote>
+        <blockquote class="quote">
+          <p>"As a driver, the mutual rating system changed everything. Riders are respectful because reputation goes both ways. I earn fairly, I see the fare before I accept, and I actually enjoy the people I pick up."</p>
+          <footer><strong>Marcus T.</strong><span>Driver · 4.98★ · 3,100 trips · Hurricane</span></footer>
+        </blockquote>
+        <blockquote class="quote">
+          <p>"I started using it for my daughter's late shifts. The live trip sharing means I watch her get home in real time. That peace of mind is worth everything."</p>
+          <footer><strong>Elena R.</strong><span>Rider · Family plan · Ivins</span></footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ===== 7 · FINAL CONVERSION + FOOTER ===== -->
+    <section class="final" id="download">
+      <h2 class="final__title">
+        <span class="line"><span>Your city is</span></span>
+        <span class="line"><span class="accent">waiting.</span></span>
+      </h2>
+      <p class="reveal">Download Ride Hero and take your first ride in minutes.</p>
+      <div class="final__badges reveal">
+        <a class="store-badge store-badge--lg store-badge--web" href="https://ridr-hero.vercel.app/" target="_blank" rel="noopener" aria-label="Open the Ride Hero web app">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.7 3.8 9S14.5 18.4 12 21c-2.5-2.6-3.8-5.7-3.8-9S9.5 5.6 12 3z"/></svg>
+          <span><small>No download needed</small>Open Web App</span>
+        </a>
+        <span class="store-badge store-badge--lg store-badge--soon" aria-label="App Store — coming soon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          <span><small>Coming soon to the</small>App Store</span>
+        </span>
+        <span class="store-badge store-badge--lg store-badge--soon" aria-label="Google Play — coming soon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 20.5v-17c0-.59.34-1.11.84-1.35L13.69 12l-9.85 9.85c-.5-.25-.84-.76-.84-1.35m13.81-5.38L6.05 21.34l8.49-8.49 2.27 2.27m3.35-4.31c.34.27.59.69.59 1.19s-.22.9-.57 1.18l-2.29 1.32-2.5-2.5 2.5-2.5 2.27 1.31M6.05 2.66l10.76 6.22-2.27 2.27-8.49-8.49z"/></svg>
+          <span><small>Coming soon to</small>Google Play</span>
+        </span>
+      </div>
+    </section>
+
+    <footer class="footer" id="cities">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a class="nav__logo" href="#top"><img src="assets/images/logo.png" alt="" class="nav__logo-img" />RIDE<span>HERO</span></a>
+          <p>Get there reliably.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Cities</h4>
+          <p>St. George</p>
+          <p>Hurricane Area</p>
+          <p>Toquerville</p>
+          <p>Spingdale (Zion NP)</p>
+        </div>
+        <div class="footer__col">
+          <h4>Company</h4>
+          <a href="https://rideheroapp.com/about">About</a>
+          <a href="https://rideheroapp.com/safety">Safety</a>
+          <a href="https://rideheroapp.com/press">Press</a>
+        </div>
+        <div class="footer__col">
+          <h4>Support</h4>
+          <a href="https://rideheroapp.com/help">Help Center</a>
+          <a href="mailto:rides@rideheroapp.com">rides@rideheroapp.com</a>
+          <a href="https://rideheroapp.com/accessibility">Accessibility</a>
+        </div>
+        <div class="footer__col">
+          <h4>Legal</h4>
+          <a href="https://rideheroapp.com/terms">Terms of Service</a>
+          <a href="https://rideheroapp.com/privacy">Privacy Policy</a>
+          <a href="https://rideheroapp.com/cookies">Cookie Policy</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 Ride Hero, Inc. All rights reserved.</p>
+        <div class="footer__apps">
+          <a href="https://ridr-hero.vercel.app/" target="_blank" rel="noopener">Web App</a>
+          <span class="footer__soon">App Store — soon</span>
+          <span class="footer__soon">Google Play — soon</span>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script type="importmap">
+    { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.165.0/build/three.module.js" } }
+  </script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
