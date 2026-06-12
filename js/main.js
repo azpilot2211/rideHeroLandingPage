@@ -276,16 +276,27 @@ if (!reducedMotion) {
     });
   });
 
-  /* Visual cards: parallax drift at different speeds */
+  /* Visual cards: parallax on desktop, simple reveal on mobile */
+  const isMobile = window.innerWidth < 768;
   gsap.utils.toArray(".vcard").forEach((card) => {
     const speed = parseFloat(card.dataset.speed || 1);
-    gsap.fromTo(card,
-      { y: 120 * speed, opacity: 0 },
-      {
-        y: -60 * (speed - 0.7), opacity: 1, ease: "none",
-        scrollTrigger: { trigger: ".visual__cards", start: "top 95%", end: "bottom 30%", scrub: 1 },
-      }
-    );
+    if (isMobile) {
+      gsap.fromTo(card,
+        { y: 40, opacity: 0 },
+        {
+          y: 0, opacity: 1, duration: 0.9, ease: "power3.out",
+          scrollTrigger: { trigger: card, start: "top 88%" },
+        }
+      );
+    } else {
+      gsap.fromTo(card,
+        { y: 120 * speed, opacity: 0 },
+        {
+          y: -60 * (speed - 0.7), opacity: 1, ease: "none",
+          scrollTrigger: { trigger: ".visual__cards", start: "top 95%", end: "bottom 30%", scrub: 1 },
+        }
+      );
+    }
   });
 
   /* Feature cards stagger in */
