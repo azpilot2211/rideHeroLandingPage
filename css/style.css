@@ -431,6 +431,48 @@ section { position: relative; padding: clamp(6rem, 12vh, 10rem) clamp(1.2rem, 6v
 .footer__apps a { color: var(--ink-dim); text-decoration: none; }
 .footer__apps a:hover { color: var(--cyan); }
 
+/* ---- Inner pages (help, accessibility, cookies, terms, privacy) ---- */
+.page-wrap {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 9rem clamp(1.2rem, 5vw, 2rem) 6rem;
+  position: relative;
+  z-index: 2;
+}
+.page-wrap h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 0.4rem;
+}
+.page-wrap .page-meta {
+  color: var(--ink-dim);
+  font-size: 0.9rem;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--stroke);
+}
+.page-wrap h2 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  margin: 2.5rem 0 0.75rem;
+  color: var(--ink);
+}
+.page-wrap p {
+  color: var(--ink-dim);
+  margin-bottom: 1rem;
+  line-height: 1.75;
+}
+.page-wrap ul, .page-wrap ol {
+  color: var(--ink-dim);
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.75;
+}
+.page-wrap li { margin-bottom: 0.4rem; }
+.page-wrap a { color: var(--cyan); text-decoration: none; }
+.page-wrap a:hover { text-decoration: underline; }
+.page-wrap strong { color: var(--ink); font-weight: 600; }
+
 /* ---- Reveal default state (animated in by GSAP) ---- */
 .reveal { opacity: 0; transform: translateY(40px); }
 .no-js .reveal, .reduced .reveal { opacity: 1; transform: none; }
