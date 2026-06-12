@@ -131,9 +131,14 @@ main { position: relative; z-index: 2; }
   font-family: var(--font-body);
   font-size: 1rem;
   font-weight: 600;
-  line-height: 1;
+  line-height: 1.5;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
   text-decoration: none;
-  border-radius: 999px;
+  border-radius: 20px;
   padding: 0.85rem 1.8rem;
   transition: transform 0.25s, box-shadow 0.25s;
 }
