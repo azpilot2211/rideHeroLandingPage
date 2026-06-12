@@ -5,6 +5,7 @@
   --ink: #f4f5fb;
   --ink-dim: #9aa0b8;
   --cyan: #67e8f9;
+  --cyan-transparent: rgba(103, 232, 249, 0.642);
   --complement: #f87171;
   --violet: #a78bfa;
   --card: rgba(255, 255, 255, 0.04);
@@ -126,7 +127,7 @@ main { position: relative; z-index: 2; }
 /* ---- Buttons & badges ---- */
 .btn {
   display: inline-block;
-  background: var(--cyan);
+  background: var(--cyan-transparent);
   color: #04141a;
   font-family: var(--font-body);
   font-size: 1rem;
