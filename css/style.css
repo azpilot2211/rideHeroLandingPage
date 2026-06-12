@@ -138,7 +138,7 @@ main { position: relative; z-index: 2; }
   user-select: none;
   border: 1px solid transparent;
   text-decoration: none;
-  border-radius: 20px;
+  border-radius: 5px;
   padding: 0.85rem 1.8rem;
   transition: transform 0.25s, box-shadow 0.25s;
 }
