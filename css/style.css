@@ -4,7 +4,7 @@
   --bg-soft: #0d0f1a;
   --ink: #f4f5fb;
   --ink-dim: #9aa0b8;
-  --cyan: #0A7DFE;
+  --cyan: #67e8f9;
   --violet: #a78bfa;
   --card: rgba(255, 255, 255, 0.04);
   --stroke: rgba(255, 255, 255, 0.09);
@@ -120,14 +120,14 @@ main { position: relative; z-index: 2; }
 .btn {
   display: inline-block;
   background: var(--cyan);
-  color: #fff;
+  color: #04141a;
   font-weight: 600;
   text-decoration: none;
   border-radius: 999px;
   padding: 0.85rem 1.8rem;
   transition: transform 0.25s, box-shadow 0.25s;
 }
-.btn:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(10, 125, 254, 0.4); }
+.btn:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(103, 232, 249, 0.35); }
 .btn--small { padding: 0.55rem 1.25rem; font-size: 0.88rem; }
 
 .store-badge {
@@ -145,7 +145,7 @@ main { position: relative; z-index: 2; }
 .store-badge:hover {
   transform: translateY(-3px);
   border-color: var(--cyan);
-  background: rgba(10, 125, 254, 0.08);
+  background: rgba(103, 232, 249, 0.08);
 }
 .store-badge svg { width: 26px; height: 26px; flex: none; }
 .store-badge span { display: flex; flex-direction: column; line-height: 1.2; font-weight: 600; font-size: 1rem; }
@@ -279,13 +279,13 @@ section { position: relative; padding: clamp(6rem, 12vh, 10rem) clamp(1.2rem, 6v
   transition: transform 0.35s, border-color 0.35s;
   will-change: transform;
 }
-.fcard:hover { transform: translateY(-6px); border-color: rgba(10, 125, 254, 0.45); }
+.fcard:hover { transform: translateY(-6px); border-color: rgba(103, 232, 249, 0.45); }
 .fcard__icon {
   width: 52px; height: 52px;
   border-radius: 14px;
   display: grid;
   place-content: center;
-  background: rgba(10, 125, 254, 0.1);
+  background: rgba(103, 232, 249, 0.1);
   color: var(--cyan);
   margin-bottom: 1.4rem;
 }
@@ -300,7 +300,7 @@ section { position: relative; padding: clamp(6rem, 12vh, 10rem) clamp(1.2rem, 6v
   letter-spacing: 0.05em;
   padding: 0.35rem 0.85rem;
   border-radius: 999px;
-  border: 1px solid rgba(10, 125, 254, 0.35);
+  border: 1px solid rgba(103, 232, 249, 0.35);
   color: var(--cyan);
 }
 
@@ -348,7 +348,7 @@ section { position: relative; padding: clamp(6rem, 12vh, 10rem) clamp(1.2rem, 6v
 .safety__list h3::before { content: "— "; color: var(--cyan); }
 .safety__list p { color: var(--ink-dim); font-size: 0.95rem; max-width: 520px; }
 .safety__shield { display: grid; place-content: center; }
-.safety__shield svg { width: clamp(200px, 24vw, 320px); filter: drop-shadow(0 0 40px rgba(10, 125, 254, 0.25)); }
+.safety__shield svg { width: clamp(200px, 24vw, 320px); filter: drop-shadow(0 0 40px rgba(103, 232, 249, 0.25)); }
 
 /* ---- Stories ---- */
 .stories__grid {
