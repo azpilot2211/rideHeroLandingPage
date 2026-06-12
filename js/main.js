@@ -300,10 +300,14 @@ if (!reducedMotion) {
   });
 
   /* Feature cards stagger in */
-  gsap.from(".fcard", {
-    y: 70, opacity: 0, duration: 0.9, stagger: 0.15, ease: "power3.out",
-    scrollTrigger: { trigger: ".features__grid", start: "top 82%" },
-  });
+  gsap.fromTo(".fcard",
+    { y: 60, opacity: 0 },
+    {
+      y: 0, opacity: 1, duration: 0.8, stagger: 0.12, ease: "power3.out",
+      clearProps: "transform,opacity",
+      scrollTrigger: { trigger: ".features__grid", start: "top 82%", once: true },
+    }
+  );
 
   /* How-it-works: numbers slide, lines draw */
   gsap.utils.toArray(".step").forEach((step, i) => {
