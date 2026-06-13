@@ -496,6 +496,10 @@ section { position: relative; padding: clamp(6rem, 12vh, 10rem) clamp(1.2rem, 6v
   .footer__brand { grid-column: 1 / -1; }
 }
 
+@media (max-width: 480px) {
+  .nav__logo { font-size: 0; gap: 0; }
+}
+
 @media (max-width: 600px) {
   .hero__cta, .final__badges {
     flex-direction: column;
